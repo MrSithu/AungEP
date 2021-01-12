@@ -20,12 +20,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author hp
  */
-public class Employee extends javax.swing.JFrame {
+public class Additional extends javax.swing.JFrame {
 
     /**
      * Creates new form Items
      */
-    public Employee() {
+    public Additional() {
         initComponents();
         table_update();
     }
@@ -55,19 +55,18 @@ public class Employee extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txt_name = new javax.swing.JTextField();
-        txt_startdate = new javax.swing.JTextField();
-        txt_enddate = new javax.swing.JTextField();
-        txt_salary = new javax.swing.JTextField();
-        txt_preuse = new javax.swing.JTextField();
+        txt_date = new javax.swing.JTextField();
+        txt_fees = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txt_description = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -182,18 +181,19 @@ public class Employee extends javax.swing.JFrame {
         jLabel2.setText("Name");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel3.setText("Start Date");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel4.setText("End Date");
+        jLabel3.setText("Date");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel5.setText("Salary");
+        jLabel5.setText("fees");
 
         jLabel6.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
-        jLabel6.setText(" ျကိုသံုး");
+        jLabel6.setText("Description");
 
         txt_name.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
+
+        txt_date.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
+
+        txt_fees.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
 
         jTable1.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -201,11 +201,11 @@ public class Employee extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "Name", "                 Start Date", "                 End Date", "                      Salary", "                      ကြိုသုံး"
+                "Id", "Name", "                          Date", "                          Fees", "                Description"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -240,38 +240,45 @@ public class Employee extends javax.swing.JFrame {
             }
         });
 
+        txt_description.setColumns(20);
+        txt_description.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
+        txt_description.setRows(5);
+        jScrollPane2.setViewportView(txt_description);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_salary)
-                            .addComponent(txt_preuse, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                            .addComponent(txt_name)
-                            .addComponent(txt_startdate)
-                            .addComponent(txt_enddate)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(80, 80, 80)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(36, 36, 36)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2))
+                                .addGap(70, 70, 70)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_fees, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(txt_name)
+                                    .addComponent(txt_date))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -292,20 +299,19 @@ public class Employee extends javax.swing.JFrame {
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(txt_startdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txt_enddate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
+                            .addComponent(txt_date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(txt_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txt_preuse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGap(60, 60, 60)
+                            .addComponent(txt_fees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(114, 114, 114)
+                                .addComponent(jLabel6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(77, 77, 77)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton5)
                             .addComponent(jButton6)
@@ -325,7 +331,7 @@ public class Employee extends javax.swing.JFrame {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("select * from employee");
+                pst = con1.prepareStatement("select * from additional");
                 ResultSet rs = pst.executeQuery();
                 
                 ResultSetMetaData rsd = rs.getMetaData();
@@ -341,55 +347,51 @@ public class Employee extends javax.swing.JFrame {
                     {
                         v2.add(rs.getString("id"));
                         v2.add(rs.getString("name"));
-                        v2.add(rs.getString("start_date"));
-                        v2.add(rs.getString("end_date"));
-                        v2.add(rs.getString("salary"));
-                        v2.add(rs.getString("preuse"));
+                        v2.add(rs.getString("date"));
+                        v2.add(rs.getString("fees"));
+                        v2.add(rs.getString("description"));
                     }
                     d.addRow(v2);
                 }                      
                 
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         String name = txt_name.getText();
-        String startdate  = txt_startdate.getText();
-        String enddate = txt_enddate.getText();
-        String salary = txt_salary.getText();
-        String preuse = txt_preuse.getText();
+        String date  = txt_date.getText();
+        String fees = txt_fees.getText();
+        String description = txt_description.getText();
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("insert into employee(name,start_date,end_date,salary,preuse)values(?,?,?,?,?)");
+            pst = con1.prepareStatement("insert into additional(name,date,fees,description)values(?,?,?,?)");
             pst.setString(1,name);
-            pst.setString(2, startdate);
-            pst.setString(3, enddate);
-            pst.setString(4, salary);
-            pst.setString(5, preuse);
+            pst.setString(2, date);
+            pst.setString(3, fees);
+            pst.setString(4, description);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee added");
+            JOptionPane.showMessageDialog(null, "Additional fees added");
             
             table_update();
             
             txt_name.setText("");
-            txt_startdate.setText("");
-            txt_enddate.setText("");
-            txt_salary.setText("");
-            txt_preuse.setText("");
+            txt_date.setText("");
+            txt_fees.setText("");
+            txt_description.setText("");
             txt_name.requestFocus();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -400,38 +402,34 @@ public class Employee extends javax.swing.JFrame {
         
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
         String name = txt_name.getText();
-        String startdate  = txt_startdate.getText();
-        String enddate = txt_enddate.getText();
-        String salary = txt_salary.getText();
-        String preuse = txt_preuse.getText();
+        String date  = txt_date.getText();
+        String fees = txt_fees.getText();
+        String description = txt_description.getText();
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("update employee set name=?,start_date=?,end_date=?,salary=?,preuse=? where id=?");    
+            pst = con1.prepareStatement("update additional set name=?,date=?,fees=?,description=? where id=?");    
             pst.setString(1,name);
-            pst.setString(2, startdate);
-            pst.setString(3, enddate);
-            pst.setString(4, salary);
-            pst.setString(5, preuse);
-            pst.setInt(6,id);
+            pst.setString(2, date);
+            pst.setString(3, fees);
+            pst.setString(4, description);
+            pst.setInt(5,id);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee Updated");
+            JOptionPane.showMessageDialog(null, "Additional Fees Updated");
             
             table_update();
             
             txt_name.setText("");
-            txt_startdate.setText("");
-            txt_enddate.setText("");
-            txt_salary.setText("");
-            txt_preuse.setText("");
+            txt_date.setText("");
+            txt_fees.setText("");
+            txt_description.setText("");
             txt_name.requestFocus();
             
-            
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
         }
             
         
@@ -450,25 +448,22 @@ public class Employee extends javax.swing.JFrame {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("delete from employee where id=?"); 
+                pst = con1.prepareStatement("delete from additional where id=?"); 
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Employee Deleted");         
+                JOptionPane.showMessageDialog(null, "Additional Fees Deleted");         
                 table_update();
                 txt_name.setText("");
-                txt_startdate.setText("");
-                txt_enddate.setText("");
-                txt_salary.setText("");
-                txt_preuse.setText("");
+                txt_date.setText("");
+                txt_fees.setText("");
+                txt_description.setText("");
                 txt_name.requestFocus();
-                
-                
-                
+          
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
-                Logger.getLogger(Employee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         }
@@ -480,10 +475,9 @@ public class Employee extends javax.swing.JFrame {
         int selectIndex = jTable1.getSelectedRow();
         
         txt_name.setText(d1.getValueAt(selectIndex,1).toString());
-        txt_startdate.setText(d1.getValueAt(selectIndex,2).toString());
-        txt_enddate.setText(d1.getValueAt(selectIndex, 3).toString());
-        txt_salary.setText(d1.getValueAt(selectIndex, 4).toString());
-        txt_preuse.setText(d1.getValueAt(selectIndex, 5).toString());
+        txt_date.setText(d1.getValueAt(selectIndex,2).toString());
+        txt_fees.setText(d1.getValueAt(selectIndex, 3).toString());
+        txt_description.setText(d1.getValueAt(selectIndex, 4).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -550,21 +544,23 @@ public class Employee extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Employee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Employee().setVisible(true);
+                new Additional().setVisible(true);
             }
         });
     }
@@ -585,16 +581,15 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txt_enddate;
+    private javax.swing.JTextField txt_date;
+    private javax.swing.JTextArea txt_description;
+    private javax.swing.JTextField txt_fees;
     private javax.swing.JTextField txt_name;
-    private javax.swing.JTextField txt_preuse;
-    private javax.swing.JTextField txt_salary;
-    private javax.swing.JTextField txt_startdate;
     // End of variables declaration//GEN-END:variables
 }

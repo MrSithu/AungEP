@@ -100,6 +100,11 @@ public class Items extends javax.swing.JFrame {
         });
 
         jButton4.setText("Logout");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         jButton8.setText("Cashier");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,6 +115,11 @@ public class Items extends javax.swing.JFrame {
 
         jButton9.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton9.setText("Inventory");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
 
         jButton10.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton10.setText("To Get");
@@ -119,6 +129,11 @@ public class Items extends javax.swing.JFrame {
 
         jButton12.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton12.setText("Additional Fees");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -498,6 +513,25 @@ public class Items extends javax.swing.JFrame {
         this.hide();
         c.setVisible(true);
     }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        Inventory in = new Inventory();
+        this.hide();
+        in.setVisible(true);
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // TODO add your handling code here:
+        Additional a = new Additional();
+        this.hide();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton12MouseClicked
 
     /**
      * @param args the command line arguments

@@ -110,6 +110,11 @@ public class Sale extends javax.swing.JFrame {
         });
 
         jButton4.setText("Logout");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         jButton8.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton8.setText("To Get");
@@ -119,9 +124,19 @@ public class Sale extends javax.swing.JFrame {
 
         jButton10.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton10.setText("Additional Fees");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
         jButton11.setText("Inventory");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
 
         jButton12.setText("Cashier");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -590,6 +605,25 @@ public class Sale extends javax.swing.JFrame {
         this.hide();
         c.setVisible(true);
     }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        // TODO add your handling code here:
+        Inventory in = new Inventory();
+        this.hide();
+        in.setVisible(true);
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        Additional a = new Additional();
+        this.hide();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton10MouseClicked
 
     /**
      * @param args the command line arguments
