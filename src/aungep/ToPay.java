@@ -20,12 +20,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author hp
  */
-public class Additional extends javax.swing.JFrame {
+public class ToPay extends javax.swing.JFrame {
 
     /**
      * Creates new form Items
      */
-    public Additional() {
+    public ToPay() {
         initComponents();
         table_update();
     }
@@ -55,18 +55,18 @@ public class Additional extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         txt_name = new javax.swing.JTextField();
         txt_date = new javax.swing.JTextField();
-        txt_fees = new javax.swing.JTextField();
+        txt_money = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txt_description = new javax.swing.JTextArea();
+        txt_reason = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -195,17 +195,13 @@ public class Additional extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel3.setText("Date");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel5.setText("fees");
+        jLabel4.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
+        jLabel4.setText("money");
 
-        jLabel6.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
-        jLabel6.setText("Description");
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel5.setText("Reason");
 
         txt_name.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
-
-        txt_date.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
-
-        txt_fees.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
 
         jTable1.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -213,7 +209,7 @@ public class Additional extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Name", "                          Date", "                          Fees", "                Description"
+                "id", "Name", "               Date", "                 Money", "                      Reason"
             }
         ) {
             Class[] types = new Class [] {
@@ -252,10 +248,9 @@ public class Additional extends javax.swing.JFrame {
             }
         });
 
-        txt_description.setColumns(20);
-        txt_description.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
-        txt_description.setRows(5);
-        jScrollPane2.setViewportView(txt_description);
+        txt_reason.setColumns(20);
+        txt_reason.setRows(5);
+        jScrollPane2.setViewportView(txt_reason);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,34 +258,31 @@ public class Additional extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
+                        .addGap(105, 105, 105)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_name, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(txt_date)
+                            .addComponent(txt_money)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
-                                .addGap(70, 70, 70)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txt_fees, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                    .addComponent(txt_name)
-                                    .addComponent(txt_date))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -312,19 +304,17 @@ public class Additional extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(txt_date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(55, 55, 55)
+                        .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txt_fees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel4)
+                            .addComponent(txt_money, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(114, 114, 114)
-                                .addComponent(jLabel6)
-                                .addGap(113, 113, 113))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65)))
+                                .addComponent(jLabel5)
+                                .addGap(35, 35, 35)))
+                        .addGap(92, 92, 92)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton5)
                             .addComponent(jButton6)
@@ -344,7 +334,7 @@ public class Additional extends javax.swing.JFrame {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("select * from additional");
+                pst = con1.prepareStatement("select * from topay");
                 ResultSet rs = pst.executeQuery();
                 
                 ResultSetMetaData rsd = rs.getMetaData();
@@ -361,17 +351,16 @@ public class Additional extends javax.swing.JFrame {
                         v2.add(rs.getString("id"));
                         v2.add(rs.getString("name"));
                         v2.add(rs.getString("date"));
-                        v2.add(rs.getString("fees"));
-                        v2.add(rs.getString("description"));
+                        v2.add(rs.getString("money"));
+                        v2.add(rs.getString("reason"));
                     }
                     d.addRow(v2);
-                }                      
-                
+                }                                      
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -379,32 +368,31 @@ public class Additional extends javax.swing.JFrame {
         // TODO add your handling code here:
         String name = txt_name.getText();
         String date  = txt_date.getText();
-        String fees = txt_fees.getText();
-        String description = txt_description.getText();
+        String money = txt_money.getText();
+        String reason = txt_reason.getText();
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("insert into additional(name,date,fees,description)values(?,?,?,?)");
+            pst = con1.prepareStatement("insert into topay(name,date,money,reason)values(?,?,?,?)");
             pst.setString(1,name);
             pst.setString(2, date);
-            pst.setString(3, fees);
-            pst.setString(4, description);
+            pst.setString(3, money);
+            pst.setString(4, reason);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Additional fees added");
+            JOptionPane.showMessageDialog(null, "To pay money added");
             
             table_update();
             
             txt_name.setText("");
             txt_date.setText("");
-            txt_fees.setText("");
-            txt_description.setText("");
+            txt_money.setText("");
+            txt_reason.setText("");
             txt_name.requestFocus();
-            
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -416,36 +404,32 @@ public class Additional extends javax.swing.JFrame {
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
         String name = txt_name.getText();
         String date  = txt_date.getText();
-        String fees = txt_fees.getText();
-        String description = txt_description.getText();
-        
+        String money = txt_money.getText();
+        String reason = txt_reason.getText();        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("update additional set name=?,date=?,fees=?,description=? where id=?");    
+            pst = con1.prepareStatement("update topay set name=?,date=?,money=?,reason=? where id=?");    
             pst.setString(1,name);
             pst.setString(2, date);
-            pst.setString(3, fees);
-            pst.setString(4, description);
+            pst.setString(3, money);
+            pst.setString(4, reason);
             pst.setInt(5,id);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Additional Fees Updated");
+            JOptionPane.showMessageDialog(null, "To pay money Updated");
             
             table_update();
             
             txt_name.setText("");
             txt_date.setText("");
-            txt_fees.setText("");
-            txt_description.setText("");
-            txt_name.requestFocus();
-            
+            txt_money.setText("");
+            txt_reason.setText("");
+            txt_name.requestFocus();            
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            
-        
+            Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
+        }      
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -455,30 +439,29 @@ public class Additional extends javax.swing.JFrame {
         
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
         
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete additional fees","Warning",JOptionPane.YES_NO_OPTION);
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete the record","Warning",JOptionPane.YES_NO_OPTION);
         if(dialogResult == JOptionPane.YES_OPTION)
         {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("delete from additional where id=?"); 
+                pst = con1.prepareStatement("delete from topay where id=?"); 
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Additional Fees Deleted");         
+                JOptionPane.showMessageDialog(null, "Record Deleted");         
                 table_update();
                 txt_name.setText("");
                 txt_date.setText("");
-                txt_fees.setText("");
-                txt_description.setText("");
+                txt_money.setText("");
+                txt_reason.setText("");
                 txt_name.requestFocus();
-          
+                             
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
-                Logger.getLogger(Additional.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ToPay.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -489,8 +472,8 @@ public class Additional extends javax.swing.JFrame {
         
         txt_name.setText(d1.getValueAt(selectIndex,1).toString());
         txt_date.setText(d1.getValueAt(selectIndex,2).toString());
-        txt_fees.setText(d1.getValueAt(selectIndex, 3).toString());
-        txt_description.setText(d1.getValueAt(selectIndex, 4).toString());
+        txt_money.setText(d1.getValueAt(selectIndex, 3).toString());
+        txt_reason.setText(d1.getValueAt(selectIndex, 4).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -571,14 +554,18 @@ public class Additional extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToPay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToPay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToPay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Additional.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToPay.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -587,7 +574,7 @@ public class Additional extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Additional().setVisible(true);
+                new ToPay().setVisible(true);
             }
         });
     }
@@ -608,15 +595,15 @@ public class Additional extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txt_date;
-    private javax.swing.JTextArea txt_description;
-    private javax.swing.JTextField txt_fees;
+    private javax.swing.JTextField txt_money;
     private javax.swing.JTextField txt_name;
+    private javax.swing.JTextArea txt_reason;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,12 +20,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author hp
  */
-public class Cashier extends javax.swing.JFrame {
+public class Account extends javax.swing.JFrame {
 
     /**
      * Creates new form Items
      */
-    public Cashier() {
+    public Account() {
         initComponents();
         table_update();
     }
@@ -70,7 +70,7 @@ public class Cashier extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         jButton1.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton1.setText("Items");
+        jButton1.setText("ကုန္စည္");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -78,7 +78,7 @@ public class Cashier extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton2.setText("Sale");
+        jButton2.setText("ေရာင္းမည္");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -86,13 +86,14 @@ public class Cashier extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton3.setText("Employee Fees");
+        jButton3.setText("၀န္ထမ္းစရိတ္");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
         jButton4.setText("Logout");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,7 +101,8 @@ public class Cashier extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Cashier");
+        jButton5.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
+        jButton5.setText("Account Settings");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
@@ -108,7 +110,7 @@ public class Cashier extends javax.swing.JFrame {
         });
 
         jButton7.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton7.setText("Inventory");
+        jButton7.setText("သိုေလွာင္ခန္း");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
@@ -116,13 +118,23 @@ public class Cashier extends javax.swing.JFrame {
         });
 
         jButton9.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton9.setText("To Get");
+        jButton9.setText("ရရန္");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
 
         jButton10.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton10.setText("To Pay");
+        jButton10.setText("ေပးရန္");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton11.setText("Additional Fees");
+        jButton11.setText("ကုန္က်စရိတ္");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton11MouseClicked(evt);
@@ -169,10 +181,10 @@ public class Cashier extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Zawgyi-One", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setForeground(new java.awt.Color(102, 0, 255));
         jLabel1.setText("ေအာင္ လ်ွပ္စစ္ပစၥည္းဆိုင္");
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cashier", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Zawgyi-One", 1, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Zawgyi-One", 1, 14))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
         jLabel2.setText("Password");
@@ -217,7 +229,7 @@ public class Cashier extends javax.swing.JFrame {
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton8)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,9 +285,9 @@ public class Cashier extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
+                        .addGap(49, 49, 49)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +313,7 @@ public class Cashier extends javax.swing.JFrame {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("select * from cashier");
+                pst = con1.prepareStatement("select * from account");
                 ResultSet rs = pst.executeQuery();
                 
                 ResultSetMetaData rsd = rs.getMetaData();
@@ -353,7 +365,7 @@ public class Cashier extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         // TODO add your handling code here:
-        Cashier c = new Cashier();
+        Account c = new Account();
         this.hide();
         c.setVisible(true);
     }//GEN-LAST:event_jButton5MouseClicked
@@ -366,20 +378,20 @@ public class Cashier extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("insert into cashier(username,password)values(?,?)");
+            pst = con1.prepareStatement("insert into account(username,password)values(?,?)");
             pst.setString(1,username);
             pst.setString(2,password);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Cashier Created");
+            JOptionPane.showMessageDialog(null,"New account created.");
             table_update();
             txt_username.setText("");
             txt_password.setText("");
             txt_username.requestFocus();
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Cashier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Account.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Cashier.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Account.class.getName()).log(Level.SEVERE, null, ex);
         }    
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -400,17 +412,17 @@ public class Cashier extends javax.swing.JFrame {
         
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
         
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to Delete the item","Warning",JOptionPane.YES_NO_OPTION);
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete the account","Warning",JOptionPane.YES_NO_OPTION);
         if(dialogResult == JOptionPane.YES_OPTION)
         {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-                pst = con1.prepareStatement("delete from cashier where id=?"); 
+                pst = con1.prepareStatement("delete from account where id=?"); 
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Cashier Deleted");         
+                JOptionPane.showMessageDialog(null, "Old account deleted.");         
                 table_update();
                 txt_username.setText("");
                 txt_password.setText("");
@@ -444,6 +456,20 @@ public class Cashier extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_jButton11MouseClicked
 
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        ToGet toget = new ToGet();
+        this.hide();
+        toget.setVisible(true);
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        ToPay topay = new ToPay();
+        this.hide();
+        topay.setVisible(true);
+    }//GEN-LAST:event_jButton10MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -461,14 +487,18 @@ public class Cashier extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cashier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Account.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -477,7 +507,7 @@ public class Cashier extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cashier().setVisible(true);
+                new Account().setVisible(true);
             }
         });
     }

@@ -171,7 +171,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Items"/>
+            <Property name="text" type="java.lang.String" value="&#x1000;&#x102f;&#x1014;&#x1039;&#x1005;&#x100a;&#x1039;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
@@ -182,7 +182,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Sale"/>
+            <Property name="text" type="java.lang.String" value="&#x1031;&#x101b;&#x102c;&#x1004;&#x1039;&#x1038;&#x1019;&#x100a;&#x1039;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
@@ -193,7 +193,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Employee Fees"/>
+            <Property name="text" type="java.lang.String" value="&#x1040;&#x1014;&#x1039;&#x1011;&#x1019;&#x1039;&#x1038;&#x1005;&#x101b;&#x102d;&#x1010;&#x1039;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton3MouseClicked"/>
@@ -201,6 +201,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Zawgyi-One" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Logout"/>
           </Properties>
           <Events>
@@ -209,7 +212,10 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton8">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cashier"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Zawgyi-One" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Account Settings"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton8MouseClicked"/>
@@ -220,7 +226,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Inventory"/>
+            <Property name="text" type="java.lang.String" value="&#x101e;&#x102d;&#x102f;&#x1031;&#x101c;&#x103d;&#x102c;&#x1004;&#x1039;&#x1001;&#x1014;&#x1039;&#x1038;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton9MouseClicked"/>
@@ -231,23 +237,29 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="To Get"/>
+            <Property name="text" type="java.lang.String" value="&#x101b;&#x101b;&#x1014;&#x1039;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton10MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton11">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="To Pay"/>
+            <Property name="text" type="java.lang.String" value="&#x1031;&#x1015;&#x1038;&#x101b;&#x1014;&#x1039;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton11MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton12">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Zawgyi-One" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Additional Fees"/>
+            <Property name="text" type="java.lang.String" value="&#x1000;&#x102f;&#x1014;&#x1039;&#x1000;&#x103a;&#x1005;&#x101b;&#x102d;&#x1010;&#x1039;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton12MouseClicked"/>
@@ -264,7 +276,7 @@
           <Font name="Zawgyi-One" size="24" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="33" red="33" type="rgb"/>
+          <Color blue="ff" green="0" red="66" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#x1031;&#x1021;&#x102c;&#x1004;&#x1039; &#x101c;&#x103a;&#x103d;&#x1015;&#x1039;&#x1005;&#x1005;&#x1039;&#x1015;&#x1005;&#x1065;&#x100a;&#x1039;&#x1038;&#x1006;&#x102d;&#x102f;&#x1004;&#x1039;"/>
       </Properties>
@@ -340,10 +352,10 @@
               <Table columnCount="6" rowCount="0">
                 <Column editable="true" title="id" type="java.lang.Object"/>
                 <Column editable="true" title="Name" type="java.lang.String"/>
-                <Column editable="true" title="                 Start Date" type="java.lang.Integer"/>
+                <Column editable="true" title="               Start Date" type="java.lang.Integer"/>
                 <Column editable="true" title="                 End Date" type="java.lang.Integer"/>
                 <Column editable="true" title="                      Salary" type="java.lang.Integer"/>
-                <Column editable="true" title="                      &#x1000;&#x103c;&#x102d;&#x102f;&#x101e;&#x102f;&#x1036;&#x1038;" type="java.lang.Integer"/>
+                <Column editable="true" title="                   &#x1000;&#x103c;&#x102d;&#x102f;&#x101e;&#x102f;&#x1036;&#x1038;" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

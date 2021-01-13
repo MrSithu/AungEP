@@ -86,7 +86,7 @@ public class Sale extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         jButton1.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton1.setText("Items");
+        jButton1.setText("ကုန္စည္");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -94,7 +94,7 @@ public class Sale extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton2.setText("Sale");
+        jButton2.setText("ေရာင္းမည္");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -102,13 +102,14 @@ public class Sale extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton3.setText("Employee Fees");
+        jButton3.setText("၀န္ထမ္းစရိတ္");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
         jButton4.setText("Logout");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -117,13 +118,23 @@ public class Sale extends javax.swing.JFrame {
         });
 
         jButton8.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton8.setText("To Get");
+        jButton8.setText("ရရန္");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton9.setText("To Pay");
+        jButton9.setText("ေပးရန္");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
 
         jButton10.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton10.setText("Additional Fees");
+        jButton10.setText("ကုန္က်စရိတ္");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton10MouseClicked(evt);
@@ -131,14 +142,15 @@ public class Sale extends javax.swing.JFrame {
         });
 
         jButton11.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton11.setText("Inventory");
+        jButton11.setText("သိုေလွာင္ခန္း");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton11MouseClicked(evt);
             }
         });
 
-        jButton12.setText("Cashier");
+        jButton12.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
+        jButton12.setText("Account Settings");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton12MouseClicked(evt);
@@ -185,7 +197,7 @@ public class Sale extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Zawgyi-One", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setForeground(new java.awt.Color(102, 0, 255));
         jLabel1.setText("ေအာင္ လ်ွပ္စစ္ပစၥည္းဆိုင္");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -601,7 +613,7 @@ public class Sale extends javax.swing.JFrame {
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
         // TODO add your handling code here:
-        Cashier c = new Cashier();
+        Account c = new Account();
         this.hide();
         c.setVisible(true);
     }//GEN-LAST:event_jButton12MouseClicked
@@ -624,6 +636,20 @@ public class Sale extends javax.swing.JFrame {
         this.hide();
         a.setVisible(true);
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        // TODO add your handling code here:
+        ToGet toget = new ToGet();
+        this.hide();
+        toget.setVisible(true);
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+        ToPay topay = new ToPay();
+        this.hide();
+        topay.setVisible(true);
+    }//GEN-LAST:event_jButton9MouseClicked
 
     /**
      * @param args the command line arguments

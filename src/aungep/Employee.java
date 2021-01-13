@@ -76,7 +76,7 @@ public class Employee extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         jButton1.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton1.setText("Items");
+        jButton1.setText("ကုန္စည္");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -84,7 +84,7 @@ public class Employee extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton2.setText("Sale");
+        jButton2.setText("ေရာင္းမည္");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -92,13 +92,14 @@ public class Employee extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton3.setText("Employee Fees");
+        jButton3.setText("၀န္ထမ္းစရိတ္");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
         jButton4.setText("Logout");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -106,7 +107,8 @@ public class Employee extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setText("Cashier");
+        jButton8.setFont(new java.awt.Font("Zawgyi-One", 0, 12)); // NOI18N
+        jButton8.setText("Account Settings");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -114,7 +116,7 @@ public class Employee extends javax.swing.JFrame {
         });
 
         jButton9.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton9.setText("Inventory");
+        jButton9.setText("သိုေလွာင္ခန္း");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -122,13 +124,23 @@ public class Employee extends javax.swing.JFrame {
         });
 
         jButton10.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton10.setText("To Get");
+        jButton10.setText("ရရန္");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
 
         jButton11.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton11.setText("To Pay");
+        jButton11.setText("ေပးရန္");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
 
         jButton12.setFont(new java.awt.Font("Zawgyi-One", 1, 14)); // NOI18N
-        jButton12.setText("Additional Fees");
+        jButton12.setText("ကုန္က်စရိတ္");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton12MouseClicked(evt);
@@ -175,7 +187,7 @@ public class Employee extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Zawgyi-One", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setForeground(new java.awt.Color(102, 0, 255));
         jLabel1.setText("ေအာင္ လ်ွပ္စစ္ပစၥည္းဆိုင္");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -201,7 +213,7 @@ public class Employee extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "Name", "                 Start Date", "                 End Date", "                      Salary", "                      ကြိုသုံး"
+                "id", "Name", "               Start Date", "                 End Date", "                      Salary", "                   ကြိုသုံး"
             }
         ) {
             Class[] types = new Class [] {
@@ -381,7 +393,7 @@ public class Employee extends javax.swing.JFrame {
             
             txt_name.setText("");
             txt_startdate.setText("");
-            txt_enddate.setText("");
+            txt_startdate.setText("");
             txt_salary.setText("");
             txt_preuse.setText("");
             txt_name.requestFocus();
@@ -444,7 +456,7 @@ public class Employee extends javax.swing.JFrame {
         
         int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
         
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you want to Delete the Employee","Warning",JOptionPane.YES_NO_OPTION);
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete employee fees","Warning",JOptionPane.YES_NO_OPTION);
         if(dialogResult == JOptionPane.YES_OPTION)
         {
             try {
@@ -509,7 +521,7 @@ public class Employee extends javax.swing.JFrame {
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         // TODO add your handling code here:
-        Cashier c = new Cashier();
+        Account c = new Account();
         this.hide();
         c.setVisible(true);
     }//GEN-LAST:event_jButton8MouseClicked
@@ -532,6 +544,20 @@ public class Employee extends javax.swing.JFrame {
         this.hide();
         a.setVisible(true);
     }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        ToGet toget = new ToGet();
+        this.hide();
+        toget.setVisible(true);
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        // TODO add your handling code here:
+        ToPay topay = new ToPay();
+        this.hide();
+        topay.setVisible(true);
+    }//GEN-LAST:event_jButton11MouseClicked
 
     /**
      * @param args the command line arguments
