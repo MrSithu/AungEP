@@ -37,7 +37,7 @@ public class print extends javax.swing.JFrame {
         txt_print.setText(txt_print.getText()+"******************************** အိမ္တြင္းဝါယာရိမ္းတပ္ဆင္ျပဳျပင္ေရးႏွင့္ ေရပိုက္တပ္ဆင္ေရးလုပ္ငန္း  ***************************\n");
         txt_print.setText(txt_print.getText()+"\n\n");
         txt_print.setText(txt_print.getText()+"အမည္ ------------------------၊ \t\t\t\t\t\t      Date----------------------------------\n\n");
-        txt_print.setText(txt_print.getText()+"အမ်ိဳးအမည္" + "\t\t\t" + "ဦးေရ" + "\t\t\t" + "နွုန္း" + "\t\t\t" + "စုစုေပါင္း" + "\n");
+        txt_print.setText(txt_print.getText()+"အမ်ိဳးအမည္" + "\t\t\t\t" + "ဦးေရ" + "\t\t\t" + "နွုန္း" + "\t\t\t" + "စုစုေပါင္း" + "\n");
         
         for(int i=0; i<tableModel.getRowCount(); i++)
         {
@@ -51,9 +51,9 @@ public class print extends javax.swing.JFrame {
         txt_print.setText(txt_print.getText()+"\n");
         txt_print.setText(txt_print.getText()+"\n");
         
-        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t စုစုေပါင္း      : " + total + "     \n");
-        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t ေပး            : " + pay + "     \n" );
-        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t ျပန္အမ္း       : " + balance + "     \n");
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t\t စုစုေပါင္း      : " + total + "     \n");
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t\t  ေပး            : " + pay + "     \n" );
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t\t ျပန္အမ္း       : " + balance + "     \n");
         
         
         txt_print.setText(txt_print.getText()+"\n\n");

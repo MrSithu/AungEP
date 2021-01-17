@@ -236,7 +236,7 @@
               <Table columnCount="3" rowCount="0">
                 <Column editable="true" title="Id" type="java.lang.Object"/>
                 <Column editable="true" title="Item" type="java.lang.String"/>
-                <Column editable="true" title="                             Remaining Unit" type="java.lang.Integer"/>
+                <Column editable="true" title="                           Remaining Unit" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

@@ -209,7 +209,7 @@ public class ToGet extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Name", "                             Date", "                            Money", "                      Reason"
+                "Id", "Name", "                             Date", "                          Money", "                      Reason"
             }
         ) {
             Class[] types = new Class [] {
