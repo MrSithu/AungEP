@@ -183,7 +183,7 @@ public class Inventory extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "Item", "                             Remaining Unit"
+                "Id", "Item", "                             Remaining Unit"
             }
         ) {
             Class[] types = new Class [] {

@@ -382,7 +382,7 @@ public class Account extends javax.swing.JFrame {
             pst.setString(1,username);
             pst.setString(2,password);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null,"New account created.");
+            JOptionPane.showMessageDialog(null,"New Account Created.");
             table_update();
             txt_username.setText("");
             txt_password.setText("");
@@ -422,7 +422,7 @@ public class Account extends javax.swing.JFrame {
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Old account deleted.");         
+                JOptionPane.showMessageDialog(null, "Old Account Deleted.");         
                 table_update();
                 txt_username.setText("");
                 txt_password.setText("");

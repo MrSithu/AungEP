@@ -69,9 +69,9 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="txt_subtotal" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="txt_total" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -81,7 +81,10 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="txt_balance" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jButton6" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton13" max="32767" attributes="0"/>
+                          <Component id="jButton6" pref="110" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -124,10 +127,12 @@
                   </Group>
                   <Component id="jScrollPane1" min="-2" pref="303" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="261" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_subtotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_total" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_pay" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -178,7 +183,7 @@
                   <Component id="jButton3" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton10" min="-2" pref="35" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="176" max="32767" attributes="0"/>
                   <Component id="jButton12" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton4" min="-2" pref="35" max="-2" attributes="0"/>
@@ -314,9 +319,9 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="13" style="0"/>
+          <Font name="Zawgyi-One" size="13" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="sell price"/>
+        <Property name="text" type="java.lang.String" value="&#x1031;&#x101b;&#x102c;&#x1004;&#x1039;&#x1038;&#x1031;&#x1005;&#x103a;&#x1038;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -367,9 +372,9 @@
               <Table columnCount="5" rowCount="0">
                 <Column editable="true" title="                          Barcode" type="java.lang.Integer"/>
                 <Column editable="true" title="Item" type="java.lang.String"/>
-                <Column editable="true" title="                         sell price" type="java.lang.Integer"/>
+                <Column editable="true" title="                      &#x101b;&#x1031;&#x102c;&#x1004;&#x103a;&#x1038;&#x1005;&#x103b;&#x1031;&#x1038;" type="java.lang.Integer"/>
                 <Column editable="true" title="                                  Qty" type="java.lang.Integer"/>
-                <Column editable="true" title="                                Total" type="java.lang.Integer"/>
+                <Column editable="true" title="                         subTotal" type="java.lang.Integer"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -405,6 +410,9 @@
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable1MouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -426,21 +434,30 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Total"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Zawgyi-One" size="11" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x1005;&#x102f;&#x1005;&#x102f;&#x1031;&#x1015;&#x102b;&#x1004;&#x1039;&#x1038;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_subtotal">
+    <Component class="javax.swing.JTextField" name="txt_total">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pay"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Zawgyi-One" size="11" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x1031;&#x1015;&#x1038;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_pay">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Balance"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Zawgyi-One" size="11" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x103b;&#x1015;&#x1014;&#x1039;&#x1021;&#x1019;&#x1039;&#x1038;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_balance">
@@ -451,6 +468,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

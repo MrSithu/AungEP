@@ -209,7 +209,7 @@ public class ToGet extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "Name", "               Date", "                 Money", "                      Reason"
+                "Id", "Name", "                             Date", "                            Money", "                      Reason"
             }
         ) {
             Class[] types = new Class [] {
@@ -249,6 +249,7 @@ public class ToGet extends javax.swing.JFrame {
         });
 
         txt_reason.setColumns(20);
+        txt_reason.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
         txt_reason.setRows(5);
         jScrollPane2.setViewportView(txt_reason);
 
@@ -282,7 +283,7 @@ public class ToGet extends javax.swing.JFrame {
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -449,7 +450,7 @@ public class ToGet extends javax.swing.JFrame {
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Employee Deleted");         
+                JOptionPane.showMessageDialog(null, "To Get Money Deleted");         
                 table_update();
                 txt_name.setText("");
                 txt_date.setText("");

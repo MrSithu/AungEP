@@ -179,7 +179,7 @@ public class Login extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
-            pst = con1.prepareStatement("SELECT * FROM `cashier` WHERE `username` =? AND `password` =?");
+            pst = con1.prepareStatement("SELECT * FROM `account` WHERE `username` =? AND `password` =?");
             pst.setString(1, username);
             pst.setString(2, password);
             rs = pst.executeQuery();

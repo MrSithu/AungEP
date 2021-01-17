@@ -193,11 +193,11 @@ public class Items extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel2.setText("Item");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel3.setText("cost price");
+        jLabel3.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
+        jLabel3.setText("၀ယ္ေစ်း");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel4.setText("sell price");
+        jLabel4.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
+        jLabel4.setText("ေရာင္းေစ်း");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel5.setText("Qty");
@@ -213,7 +213,7 @@ public class Items extends javax.swing.JFrame {
 
             },
             new String [] {
-                "                             ID", "Item", "                 cost price", "                  sell price", "                           Qty", "                   Barcode"
+                "                             Id", "Item", "                   ဝယ်စျေး", "                ရောင်းစျေး", "                           Qty", "                   Barcode"
             }
         ) {
             Class[] types = new Class [] {

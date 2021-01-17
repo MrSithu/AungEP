@@ -72,12 +72,13 @@ public class Sale extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txt_subtotal = new javax.swing.JTextField();
+        txt_total = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txt_pay = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txt_balance = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -188,7 +189,7 @@ public class Sale extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,8 +204,8 @@ public class Sale extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel2.setText("Item");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel4.setText("sell price");
+        jLabel4.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
+        jLabel4.setText("ေရာင္းေစ်း");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel5.setText("Qty");
@@ -226,7 +227,7 @@ public class Sale extends javax.swing.JFrame {
 
             },
             new String [] {
-                "                          Barcode", "Item", "                         sell price", "                                  Qty", "                                Total"
+                "                          Barcode", "Item", "                      ရောင်းစျေး", "                                  Qty", "                         subTotal"
             }
         ) {
             Class[] types = new Class [] {
@@ -235,6 +236,11 @@ public class Sale extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -253,16 +259,26 @@ public class Sale extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Total");
+        jLabel3.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
+        jLabel3.setText("စုစုေပါင္း");
 
-        jLabel7.setText("Pay");
+        jLabel7.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
+        jLabel7.setText("ေပး");
 
-        jLabel8.setText("Balance");
+        jLabel8.setFont(new java.awt.Font("Zawgyi-One", 0, 11)); // NOI18N
+        jLabel8.setText("ျပန္အမ္း");
 
         jButton6.setText("Checkout");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setText("Reset");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
             }
         });
 
@@ -303,9 +319,9 @@ public class Sale extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(txt_subtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_total, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -315,7 +331,9 @@ public class Sale extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(txt_balance, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
                         .addGap(30, 30, 30))))
         );
         layout.setVerticalGroup(
@@ -347,10 +365,12 @@ public class Sale extends javax.swing.JFrame {
                             .addComponent(jButton5)
                             .addComponent(jButton7)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_subtotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(txt_pay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
@@ -382,7 +402,7 @@ public class Sale extends javax.swing.JFrame {
                 int sellprice = Integer.parseInt(txt_sellprice.getText());
                 int newQty = Integer.parseInt(txt_qty.getText());
                 
-                int total = sellprice * newQty;
+                int subTotal = sellprice * newQty;
                 
                 if(newQty >= currentQty)
                 {
@@ -398,7 +418,7 @@ public class Sale extends javax.swing.JFrame {
                         txt_item.getText(),
                         txt_sellprice.getText(),
                         txt_qty.getText(),
-                        total,
+                        subTotal,
                     });
                     
                     int sum = 0;
@@ -407,7 +427,7 @@ public class Sale extends javax.swing.JFrame {
                         sum = sum + Integer.parseInt(jTable1.getValueAt(i, 4).toString());
                     }
                     
-                    txt_subtotal.setText(Integer.toString(sum));
+                    txt_total.setText(Integer.toString(sum));
                     
                         txt_barcode.setText("");
                         txt_item.setText("");
@@ -434,6 +454,11 @@ public class Sale extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         model.removeRow(jTable1.getSelectedRow());
+        txt_barcode.setText("");
+        txt_item.setText("");
+        txt_sellprice.setText("");
+        txt_qty.setText("");
+        
         int sum = 0;
         
         for(int i=0; i<jTable1.getRowCount(); i++)
@@ -441,7 +466,7 @@ public class Sale extends javax.swing.JFrame {
                 sum = sum + Integer.parseInt(jTable1.getValueAt(i, 4).toString());
             }
         
-                txt_subtotal.setText(Integer.toString(sum));
+                txt_total.setText(Integer.toString(sum));
         
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -508,7 +533,7 @@ public class Sale extends javax.swing.JFrame {
         LocalDateTime now = LocalDateTime.now();
         String date = dtf.format(now);
         
-        String subtotal = txt_subtotal.getText();
+        String total = txt_total.getText();
         String pay = txt_pay.getText();
         String balance = txt_balance.getText();
         int lastinsertid = 0;
@@ -517,10 +542,10 @@ public class Sale extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");        
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/aungep","root","");
             
-            String query = "insert into sales(date,subtotal,pay,balance)values(?,?,?,?)";           
+            String query = "insert into sales(date,total,pay,balance)values(?,?,?,?)";           
             insert = con1.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);           
             insert.setString(1,date);
-            insert.setString(2,subtotal);
+            insert.setString(2,total);
             insert.setString(3,pay);
             insert.setString(4,balance);
             insert.executeUpdate();
@@ -533,26 +558,26 @@ public class Sale extends javax.swing.JFrame {
             
             int rows = jTable1.getRowCount();
             
-            String query1 = "insert into sales_item(sales_id,item_id,sell_price,qty,total)values(?,?,?,?,?)";
+            String query1 = "insert into sales_item(sales_id,item_id,sell_price,qty,subtotal)values(?,?,?,?,?)";
             insert = con1.prepareStatement(query1);
             
             String item_id = "";
             String sell_price = "";
             String qty = "";
-            int total = 0;
+            int subTotal = 0;
             
             for(int i= 0; i < jTable1.getRowCount(); i++)
             {
                 item_id = (String)jTable1.getValueAt(i,0);
                 sell_price = (String)jTable1.getValueAt(i,2);
                 qty = (String)jTable1.getValueAt(i,3);
-                total = (int)jTable1.getValueAt(i,4);
+                subTotal = (int)jTable1.getValueAt(i,4);
                 
                 insert.setInt(1, lastinsertid);
                 insert.setString(2, item_id);
                 insert.setString(3, sell_price);
                 insert.setString(4, qty);
-                insert.setInt(5, total);
+                insert.setInt(5, subTotal);
                 insert.executeUpdate();
             }
             
@@ -581,12 +606,12 @@ public class Sale extends javax.swing.JFrame {
      
     public void print()
     {
-        String subtotal = txt_subtotal.getText();
+        String total = txt_total.getText();
         String pay = txt_pay.getText();
         String balance = txt_balance.getText();
         
         try {
-            new print(subtotal,pay,balance,jTable1.getModel()).setVisible(true);
+            new print(total,pay,balance,jTable1.getModel()).setVisible(true);
         } catch (PrinterException ex) {
             Logger.getLogger(Sale.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -595,15 +620,20 @@ public class Sale extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         
-        int subtotal = Integer.parseInt(txt_subtotal.getText());
+        int total = Integer.parseInt(txt_total.getText());
         int pay = Integer.parseInt(txt_pay.getText());
         
-        if(pay >= subtotal)
+        if(pay >= total)
         {
-            int balance =  pay - subtotal;
+            int balance =  pay - total;
             txt_balance.setText(String.valueOf(balance));   
-            print();
             sales();
+
+            int dialogPrint = JOptionPane.showConfirmDialog(null, "Do you want to print the voucher","Warning",JOptionPane.YES_NO_OPTION);
+            if(dialogPrint == JOptionPane.YES_OPTION)
+            {
+             print();
+            }          
         }
         else
         {
@@ -651,6 +681,33 @@ public class Sale extends javax.swing.JFrame {
         topay.setVisible(true);
     }//GEN-LAST:event_jButton9MouseClicked
 
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        txt_total.setText("");
+        txt_pay.setText("");
+        txt_balance.setText("");
+        txt_barcode.setText("");
+        txt_item.setText("");
+        txt_sellprice.setText("");
+        txt_qty.setText("");
+
+        int rowsCount = model.getRowCount();
+        for(int i = rowsCount - 1; i >= 0; i--){
+            model.removeRow(i);
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel d1 = (DefaultTableModel)jTable1.getModel();
+        int selectIndex = jTable1.getSelectedRow();
+        
+        txt_barcode.setText(d1.getValueAt(selectIndex,0).toString());
+        txt_item.setText(d1.getValueAt(selectIndex,1).toString());
+        txt_sellprice.setText(d1.getValueAt(selectIndex, 2).toString());
+        txt_qty.setText(d1.getValueAt(selectIndex, 3).toString());
+    }//GEN-LAST:event_jTable1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -692,6 +749,7 @@ public class Sale extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -717,6 +775,6 @@ public class Sale extends javax.swing.JFrame {
     private javax.swing.JTextField txt_pay;
     private javax.swing.JTextField txt_qty;
     private javax.swing.JTextField txt_sellprice;
-    private javax.swing.JTextField txt_subtotal;
+    private javax.swing.JTextField txt_total;
     // End of variables declaration//GEN-END:variables
 }

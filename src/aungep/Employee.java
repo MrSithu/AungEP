@@ -213,7 +213,7 @@ public class Employee extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id", "Name", "               Start Date", "                 End Date", "                      Salary", "                   ကြိုသုံး"
+                "Id", "Name", "               Start Date", "                 End Date", "                      Salary", "                      ကြိုသုံး"
             }
         ) {
             Class[] types = new Class [] {
@@ -387,7 +387,7 @@ public class Employee extends javax.swing.JFrame {
             pst.setString(4, salary);
             pst.setString(5, preuse);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee added");
+            JOptionPane.showMessageDialog(null, "Employee Fees added");
             
             table_update();
             
@@ -428,7 +428,7 @@ public class Employee extends javax.swing.JFrame {
             pst.setString(5, preuse);
             pst.setInt(6,id);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee Updated");
+            JOptionPane.showMessageDialog(null, "Employee Fees Updated");
             
             table_update();
             
@@ -466,7 +466,7 @@ public class Employee extends javax.swing.JFrame {
                 pst.setInt(1, id);
                 pst.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Employee Deleted");         
+                JOptionPane.showMessageDialog(null, "Employee Fees Deleted");         
                 table_update();
                 txt_name.setText("");
                 txt_startdate.setText("");

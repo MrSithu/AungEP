@@ -196,7 +196,7 @@ public class Additional extends javax.swing.JFrame {
         jLabel3.setText("Date");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jLabel5.setText("fees");
+        jLabel5.setText("Fees");
 
         jLabel6.setFont(new java.awt.Font("Zawgyi-One", 0, 13)); // NOI18N
         jLabel6.setText("Description");
@@ -391,7 +391,7 @@ public class Additional extends javax.swing.JFrame {
             pst.setString(3, fees);
             pst.setString(4, description);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Additional fees added");
+            JOptionPane.showMessageDialog(null, "Additional Fees  Added");
             
             table_update();
             

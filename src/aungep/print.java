@@ -21,40 +21,44 @@ public class print extends javax.swing.JFrame {
         initComponents();
     }
     
-    String lsubtotal;
-    String lpay;
-    String lbalance;
+    String total;
+    String pay;
+    String balance;
     
-    public print(String subtotal,String pay,String balance,TableModel tableModel) throws PrinterException {
+    public print(String total,String pay,String balance,TableModel tableModel) throws PrinterException {
         initComponents();
-        this.lsubtotal = subtotal;
-        this.lpay = pay;
-        this.lbalance = balance;
+        this.total = total;
+        this.pay = pay;
+        this.balance = balance;
         
-        txt_print.setText(txt_print.getText()+"*********************************\n");
-        txt_print.setText(txt_print.getText()+"******** Aung EP Electronic ********\n");
-        txt_print.setText(txt_print.getText()+"\n");
-        txt_print.setText(txt_print.getText()+"Item" + "\t" + "Price" + "\t" + "Total" + "\n");
+        txt_print.setText(txt_print.getText()+"************************* ဗုဒၶံ ***********************  ဓမၼံ  *********************** သံဃံ **************************\n");
+        txt_print.setText(txt_print.getText()+"************************************************** AUNG EP ***************************************************\n");
+        txt_print.setText(txt_print.getText()+"******************************************** လၽွပ္စစ္ပစၥည္းေရာင္းဝယ္ေရး ********************************************\n");
+        txt_print.setText(txt_print.getText()+"******************************** အိမ္တြင္းဝါယာရိမ္းတပ္ဆင္ျပဳျပင္ေရးႏွင့္ ေရပိုက္တပ္ဆင္ေရးလုပ္ငန္း  ***************************\n");
+        txt_print.setText(txt_print.getText()+"\n\n");
+        txt_print.setText(txt_print.getText()+"အမည္ ------------------------၊ \t\t\t\t\t\t      Date----------------------------------\n\n");
+        txt_print.setText(txt_print.getText()+"အမ်ိဳးအမည္" + "\t\t\t" + "ဦးေရ" + "\t\t\t" + "နွုန္း" + "\t\t\t" + "စုစုေပါင္း" + "\n");
         
         for(int i=0; i<tableModel.getRowCount(); i++)
         {
             String item = (String) tableModel.getValueAt(i, 1);
             String price = (String) tableModel.getValueAt(i, 2);
-            int total = (int) tableModel.getValueAt(i, 4);
+            String qty = (String) tableModel.getValueAt(i, 3);
+            int subtotal = (int) tableModel.getValueAt(i, 4);
             
-            txt_print.setText(txt_print.getText() + item + "\t" + price + "\t" + total + "\n");
+            txt_print.setText(txt_print.getText() + item + "\t\t\t" + qty + "\t\t\t" + price + "\t\t\t" + subtotal + "\n");
         }
         txt_print.setText(txt_print.getText()+"\n");
         txt_print.setText(txt_print.getText()+"\n");
         
-        txt_print.setText(txt_print.getText()+"Total      : " + subtotal + "     \n");
-        txt_print.setText(txt_print.getText()+"Pay        : " + pay + "     \n" );
-        txt_print.setText(txt_print.getText()+"Balance  : " + balance + "     \n");
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t စုစုေပါင္း      : " + total + "     \n");
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t ေပး            : " + pay + "     \n" );
+        txt_print.setText(txt_print.getText()+"\t\t\t\t\t\t\t\t ျပန္အမ္း       : " + balance + "     \n");
         
         
         txt_print.setText(txt_print.getText()+"\n\n");
-        txt_print.setText(txt_print.getText()+"**********************************\n");
-        txt_print.setText(txt_print.getText()+"************ Thank You ************\n");
+        txt_print.setText(txt_print.getText()+"*********************************************************************************************************\n");
+        txt_print.setText(txt_print.getText()+"*************************************** အားေပးမႈကို အထူးေက်းဇူးတင္ပါသည္ *************************************\n");
         
         txt_print.print();
 
@@ -83,11 +87,11 @@ public class print extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 835, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
         );
 
         pack();
